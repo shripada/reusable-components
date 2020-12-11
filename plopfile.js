@@ -22,17 +22,17 @@ module.exports = function (plop) {
         actions: [
             {
                 type: 'add',
-                path: 'src/components/{{pascalCase name}}/{{pascalCase name}}.js',
+                path: 'src/components/{{pascalCase name}}/{{pascalCase name}}.tsx',
                 templateFile: 'plop-templates/component/component.js.hbs'
             },
             {
                 type: 'add',
-                path: 'src/components/{{pascalCase name}}/{{pascalCase name}}.test.js',
+                path: 'src/components/{{pascalCase name}}/{{pascalCase name}}.test.ts',
                 templateFile: 'plop-templates/component/component.test.hbs'
             },
             {
                 type: 'add',
-                path: 'src/components/{{pascalCase name}}/{{pascalCase name}}.stories.js',
+                path: 'src/components/{{pascalCase name}}/{{pascalCase name}}.stories.tsx',
                 templateFile: 'plop-templates/component/component.stories.hbs'
             },
             {
