@@ -1,6 +1,9 @@
 @import-normalize;
 
 .Dropdown {
+    color: white;
+    background-color: gray;
+    position: relative;
 }
 
 .Header {
@@ -18,10 +21,23 @@
 }
 
 .DropdownMenu {
-    background-color: teal;
-    display: block;
+    position: absolute;
+    background-color: gray;
+    width: 100%;
+    text-indent: 10px;
+    max-height: 50vh;
+    transition: max-height 0.4s ease-out;
+    overflow: auto;
+}
+
+.DropdownMenu > div {
+    margin-bottom: 12px;
+}
+.DropdownMenu > div:first-child {
+    margin-top: 8px;
 }
 
 .DropdownMenu.Hidden {
-    display: none;
+    max-height: 0;
+    transition: max-height 0.4s ease-out;
 }

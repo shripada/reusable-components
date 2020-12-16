@@ -7,5 +7,9 @@ component: Dropdown,
 };
 
 export const Dropdown_1 = () => (
-<Dropdown />
+  <div>
+    <Dropdown />
+    <input type="text" id="fname" name="fname" style={{marginTop:'16px'}}/>
+  </div>
+
 );
