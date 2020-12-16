@@ -2,8 +2,7 @@
     box-sizing: border-box;
     width: 8px;
     height: 8px;
-    border-top: 1px solid red;
-    border-right: 1px solid red;
+    margin-right:10px;
     transform: rotate(-135deg);
-    transition: transform 1s ease-in;
+    transition: transform 0.3s ease-in;
 }
