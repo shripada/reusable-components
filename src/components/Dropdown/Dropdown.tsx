@@ -12,7 +12,7 @@ const Dropdown = (props) => {
     const [show, setShow] = useState(false);
     const [selectedItem, setSelectedItem] = useState('Option1');
     const dropdownClassNames = cn(styles.DropdownMenu, { [styles.Hidden]: !show });
-
+    const dropdownContainerClassNames = cn(styles.Dropdown, { [styles.Hidden]: !show });
     const onItemClick = (item) => {
         //Set the selected item, and then close the menu
         setSelectedItem(item);
@@ -20,10 +20,10 @@ const Dropdown = (props) => {
     };
 
     return (
-        <div className={styles.Dropdown}>
+        <div className={dropdownContainerClassNames}>
             <div className={styles.Header} onClick={() => setShow((prev: boolean) => !prev)}>
                 <div className={styles.SelectedItemText}> {selectedItem} </div>
-                <Arrow direction={show ? Direction.Top : Direction.Bottom} color={'white'} />
+                <Arrow direction={show ? Direction.Top : Direction.Bottom} color={'#212121'} />
             </div>
             <div className={dropdownClassNames}>
                 <DropdownItem title="Option1" onClick={onItemClick} />

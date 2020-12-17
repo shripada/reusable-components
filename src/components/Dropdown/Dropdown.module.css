@@ -1,19 +1,33 @@
 @import-normalize;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 .Dropdown {
-    color: white;
-    background-color: gray;
+    color: #212121;
+    background-color: white;
     position: relative;
+    font-family: 'Roboto, sans-serif';
+    font-size: 14px;
+    line-height: 1.43;
+    border-radius: 4px 4px 0 0;
+    border: solid 1px #dbdbdb;
+    border-bottom: none;
+    transition: box-shadow 0.4s ease-out;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.24);
+}
+
+.Dropdown.Hidden {
+    box-shadow: none;
+    border: solid 1px #dbdbdb;
+    border-radius: 4px;
 }
 
 .Header {
-    color: white;
-    background-color: gray;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 10px 0px 10px;
+    border: none;
 }
 
 .SelectedItemText {
@@ -22,12 +36,15 @@
 
 .DropdownMenu {
     position: absolute;
-    background-color: gray;
+    top: 40px;
     width: 100%;
     text-indent: 10px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.24);
     max-height: 50vh;
-    transition: max-height 0.4s ease-out;
     overflow: auto;
+    background-color: white;
+    border: solid 1px #dbdbdb;
+    border-top: none;
 }
 
 .DropdownMenu > div {
@@ -40,4 +57,5 @@
 .DropdownMenu.Hidden {
     max-height: 0;
     transition: max-height 0.4s ease-out;
+    box-shadow: none;
 }
