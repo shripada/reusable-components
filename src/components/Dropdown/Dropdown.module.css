@@ -1,24 +1,31 @@
 @import-normalize;
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-.Dropdown {
-    color: #212121;
-    background-color: white;
-    position: relative;
-    font-family: 'Roboto, sans-serif';
-    font-size: 14px;
-    line-height: 1.43;
-    border-radius: 4px 4px 0 0;
-    border: solid 1px #dbdbdb;
-    border-bottom: none;
-    transition: box-shadow 0.4s ease-out;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.24);
+
+.DropdownContainer{
+  background-color: white;
+  font-family: Roboto;
+  font-size: 14px;
+  line-height: 1.43;
+  letter-spacing: normal;
+  color: #212121;
+  position: relative;
+  width: 100%;
+  height: 48px;
 }
 
-.Dropdown.Hidden {
-    box-shadow: none;
-    border: solid 1px #dbdbdb;
-    border-radius: 4px;
+.Dropdown {
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  border: solid 1px #dbdbdb;
+  border-radius: 4px;
+}
+
+.Dropdown.Active {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.24);
+  boder:none;
 }
 
 .Header {
@@ -26,7 +33,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0px 10px;
+    padding: 14px 0px 14px;
     border: none;
 }
 
@@ -34,28 +41,19 @@
     margin-left: 10px;
 }
 
-.DropdownMenu {
-    position: absolute;
-    top: 40px;
-    width: 100%;
-    text-indent: 10px;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.24);
-    max-height: 50vh;
-    overflow: auto;
-    background-color: white;
-    border: solid 1px #dbdbdb;
-    border-top: none;
+.Menu {
+  overflow: auto;
+  max-height:0;
+  background: white;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-.DropdownMenu > div {
-    margin-bottom: 12px;
-}
-.DropdownMenu > div:first-child {
-    margin-top: 8px;
+.Menu.Active{
+  max-height:150px;
 }
 
-.DropdownMenu.Hidden {
-    max-height: 0;
-    transition: max-height 0.4s ease-out;
-    box-shadow: none;
+.Option {
+  margin-bottom:15px;
 }
+
