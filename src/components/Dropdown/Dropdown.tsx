@@ -30,22 +30,26 @@ const Dropdown = ({options, selectedOption, onItemSelected}: DropdownProps) => {
     };
 
     return (
-       <div className={styles.DropdownContainer}>
-          <div className={dropdownClasses}>
-              <div className={styles.Header} onClick={() => setActive((prev: boolean) => !prev)}>
-                  <div className={styles.SelectedItemText}> {selectedItem} </div>
-                  <Arrow direction={active ? Direction.Top : Direction.Bottom} color={'#212121'} />
-              </div>
-              <div className={menuClasses}>
-                  <DropdownItem title="Option1" onClick={onItemClick} />
-                  <DropdownItem title="Option2" onClick={onItemClick} />
-                  <DropdownItem title="Option3" onClick={onItemClick} />
-                  <DropdownItem title="Option4" onClick={onItemClick} />
-                  <DropdownItem title="Option5" onClick={onItemClick} />
-                  <DropdownItem title="Option1" onClick={onItemClick} />
-              </div>
-          </div>
+        <div>
+            <div className={styles.DropdownContainer}>
+                <div className={dropdownClasses}>
+                    <div className={styles.Header} onClick={() => setActive((prev: boolean) => !prev)}>
+                        <div className={styles.SelectedItemText}> {selectedItem} </div>
+                        <Arrow direction={active ? Direction.Top : Direction.Bottom} color={'#212121'} />
+                    </div>
+                    <div className={menuClasses}>
+                        <DropdownItem title="Option1" onClick={onItemClick} />
+                        <DropdownItem title="Option2" onClick={onItemClick} />
+                        <DropdownItem title="Option3" onClick={onItemClick} />
+                        <DropdownItem title="Option4" onClick={onItemClick} />
+                        <DropdownItem title="Option5" onClick={onItemClick} />
+                        <DropdownItem title="Option1" onClick={onItemClick} />
+                    </div>
+                </div>
+            </div>
+            <input type="text" id="fname" name="fname" value={selectedItem} style={{marginTop:'16px'}}/>
         </div>
+       
     );
 };
 
